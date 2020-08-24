@@ -28,41 +28,60 @@
     </ul>
 </nav>
     </header>
+    <article id="noticia-principal">
+        <hgroup>
+        <header id="cabecalho-artigo">
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>Por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 23/Abril/2013.</h3>
+        </header>
+        </hgroup>
+<!--Formulário de contato do Usuário-->
+<form method="POST" action="mailto:joadsonrocharr@gmail.com">
+    <fieldset id="usuario"><legend> identificação do Usuário</legend>
+    <p><label for="cnome">Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="20" placeholder="NOME COMPLETO"/></p>
+    <p><label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="SENHA"/></p>
+    <p><label for="cmail">E-mail:</label>  <input type="email" name="tmail" id="cmail" size="20" maxlength="20" placeholder="EMAIL"/></p>
+    <fieldset id="sexo"><legend> Sexo</legend>
+    <input type="radio" name="tsexo" id="cmasc" checked/><label for="cmasc" >Masculino</label><br/>
+        <input type="radio" name="tsexo" id="cfem"/><label for="cfem">Feminino</label></fieldset>
+    <fieldset><p><label for="cdata">Data de Nascimento:</label> <input type="date" name="tdata" id="cdata"/></p></fieldset>
+    </fieldset>
+    <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+    <p><label for="clogro">Logradouro:</label> <input type="text" name="tlogro" id="clogro" size="30" maxlength="30" placeholder="RUA, AV, TRAVESSA"/></p>
+    <p><label for="cnum">Número:</label> <input type="number" name="tnum" id="cnum" min="0" max="99999" /></p>
+    <p><label for="cestado">Estado:</label> <select name="testado" id="cestado">
+        <optgroup label="Região Norte"><option selected value="RR">Roraima</option>
+        <option value="MA">Manaus</option>
+        <option value="AC">Acre</option>
+        <option value="RO">Rondônia</option>
+        <option value="PA">Pará</option>
+        <option value="AM">Amapá</option></optgroup></p>
+    </select></p>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
+<p><label for="cdade">Cidade:</label> <input type="text" name="tdade" id="cdade" maxlength="20" size="20" placeholder="Sua Cidade" list="cidade"/></p>
+    <datalist id="cidade">
+        <option>Boa Vista</option>
+        <option>Manaus</option>
+        <option>Belém</option>
+        <option>Rio Branco</option>
+        <option>Macapá</option>
+    </datalist>
+    </fieldset>
+    <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+    <p><label for="cgrau">Grau de Urgência:</label> Min<input type="range" name="tgrau" id="cgrau" min="0" max="10" step="2"/>Max</p>
+    <p><label for="cmsg">Mensagem:</label> <textarea name="tmsg" id="cmsg" cols="40" rows="8" ></textarea></p>
+    </fieldset>
+    <fieldset id="glass"><legend>Quero um Google Glass</legend>
     Gostaria de adquirir um Google Glass quando disponível
     Cor:
     Quantidade:
     Preço Total: R$
-
-
+    </fieldset>
 [BOTÃO ENVIAR]
-
-<footer id="rodape"><p>Copyright 2020 &copy; - by Joadson Rocha
+</form>
+<footer id="rodape"><p>Copyright 2020 &copy; - by <strong>Joadson Rocha</strong>
     <br>Facebook </p></footer>
 </div>    
 </body>
