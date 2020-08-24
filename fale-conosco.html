@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
     <title>Google Glass</title>
     <script src="_javascript/funcoes.js"></script>
+    <script>
+        function cal_total (){
+            var qtd = parseInt(document.getElementById('cquat').value);
+            var tot = qtd * 1500;
+            document.getElementById('cpreco').value = tot
+        }
+    </script>
 </head>
 <body>
 <div id="interface">
@@ -38,11 +46,11 @@
         </header>
         </hgroup>
 <!--Formulário de contato do Usuário-->
-<form method="POST" action="mailto:joadsonrocharr@gmail.com">
+<form method="POST" action="mailto:joadsonrocharr@gmail.com" oninput="cal_total();">
     <fieldset id="usuario"><legend> identificação do Usuário</legend>
     <p><label for="cnome">Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="20" placeholder="NOME COMPLETO"/></p>
     <p><label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="SENHA"/></p>
-    <p><label for="cmail">E-mail:</label>  <input type="email" name="tmail" id="cmail" size="20" maxlength="20" placeholder="EMAIL"/></p>
+    <p><label for="cmail">E-mail:</label>  <input type="email" name="tmail" id="cmail" size="20" maxlength="50" placeholder="EMAIL"/></p>
     <fieldset id="sexo"><legend> Sexo</legend>
     <input type="radio" name="tsexo" id="cmasc" checked/><label for="cmasc" >Masculino</label><br/>
         <input type="radio" name="tsexo" id="cfem"/><label for="cfem">Feminino</label></fieldset>
@@ -74,12 +82,13 @@
     <p><label for="cmsg">Mensagem:</label> <textarea name="tmsg" id="cmsg" cols="40" rows="8" ></textarea></p>
     </fieldset>
     <fieldset id="glass"><legend>Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+   <p><input type="checkbox" name="tped" id="cpad" checked/><label for="cpad">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="ccor">Cor:</label> <input type="color" name="tcor" id="ccor" values="#0000ff"/></p>
+    <p><label for="cquat">Quantidade:</label> <input type="number" name="tquat" id="cquat" min="0" max="5" value="0"/></p>
+    <p><label for="cpreco">Preço Total: R$</label> <input type="text" name="tpreco" id="cpreco" placeholder="Total a pagar" readonly></p>
     </fieldset>
-[BOTÃO ENVIAR]
+    <input type="image" name="tenviar" id="cenviar" src="_imagens/botao-enviar.png"/>
+
 </form>
 <footer id="rodape"><p>Copyright 2020 &copy; - by <strong>Joadson Rocha</strong>
     <br>Facebook </p></footer>
